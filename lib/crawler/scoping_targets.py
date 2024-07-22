@@ -1,8 +1,8 @@
 from lib.crawler import crawler 
 from urllib.parse import urljoin, urlparse
-import re
-
-
+import time
+from datetime import datetime
+from lib.visuals.bash_colors import color
 
 def get_soup(url, COOKIES):
     return crawler.crawl_website(url, COOKIES)
@@ -44,33 +44,6 @@ def find_csrf_tokens(soup):
             tokens.append(name)
     return tokens
 
-def analyze_page(url, COOKIES):
-    soup = get_soup(url, COOKIES)
-    if not soup:
-        return
+  
 
-    print(f"\nAnalyzing URL: {url}\n")
     
-    print("Forms:")
-    forms = find_forms(soup, url)
-    for action, method, inputs in forms:
-        print(f"Action: {action}, Method: {method}")
-        for input_type, input_name in inputs:
-            print(f"  Input: type={input_type}, name={input_name}")
-
-    print("\nLinks with query parameters:")
-    links = find_links(soup, url)
-    for link in links:
-        print(link)
-
-    print("\nElements with event handlers (potential XSS):")
-    event_handlers = find_event_handlers(soup)
-    for tag_name, attr, value in event_handlers:
-        print(f"Tag: {tag_name}, Event: {attr}, Value: {value}")
-
-    print("\nPotential CSRF tokens:")
-    csrf_tokens = find_csrf_tokens(soup)
-    for token in csrf_tokens:
-        print(token)
-
-
