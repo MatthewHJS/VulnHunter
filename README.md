@@ -20,4 +20,3 @@ Install the required dependencies:
 cd web-vuln-detection
 pip install -r requirements.txt
 ```
-m
