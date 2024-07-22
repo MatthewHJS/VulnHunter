@@ -8,15 +8,14 @@ A tool for automatically detecting common web application vulnerabilities such a
 - **Cross-Site Request Forgery Detection:** Identify CSRF vulnerabilities and help prevent unauthorized actions.
 
 ## Installation
-To get started with the Web Vulnerability Detector, clone this repository:
+To get started with the VulnHunter, clone this repository:
 
 ```sh
-git clone https://github.com/matthewhjorneviksaunders/web-vuln-detection
-```
+git clone https://github.com/matthewhjorneviksaunders/VulnHunter
 
 Install the required dependencies:
 
 ```sh
-cd web-vuln-detection
+cd VulnHunter
 pip install -r requirements.txt
 ```
