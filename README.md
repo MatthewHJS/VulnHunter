@@ -1,4 +1,4 @@
-# Web Vulnerability Detector 
+# VulnHunter 
 
 A tool for automatically detecting common web application vulnerabilities such as SQL injection (SQLi), Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF). This tool aims to help developers identify and mitigate security flaws in their web applications.
 
