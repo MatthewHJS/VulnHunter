@@ -16,7 +16,7 @@ A tool for automatically detecting common web application vulnerabilities such a
 To get started with the VulnHunter, clone this repository:
 
 ```sh
-git clone https://github.com/matthewhjorneviksaunders/VulnHunter
+git clone https://github.com/matthewhjs/VulnHunter
 
 Install the required dependencies:
 
